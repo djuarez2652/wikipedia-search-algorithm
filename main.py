@@ -154,7 +154,7 @@ def update_trends():
 
 
 def load_trends():
-    update_time = 1000
+    update_time = 432000
     updated = False
     if int(time.time()) - int(os.path.getmtime('./pages.db')) > update_time:
         updated = True
@@ -394,6 +394,6 @@ if __name__ == '__main__':
             print(f"Trend: {result['title']} (ID: {result['id']})")
         elif result['type'] == 'keyword':
             print(f"Keyword: {result['keyword']} {result['article_url']}")
-    print('Suggestions: ')
+    print('Predicted Next Words: ')
     print(predictions)
     print('-'*20)
